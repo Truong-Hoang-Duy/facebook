@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+</head>
+
+<body>
+    <header id="header">
+        <div class="layer"></div>
+
+        <div class="main">
+            <div class="left">
+                <img src="/img/fb logo.svg" alt="">
+                <p>Connect with friends and the world around you on Facebook.</p>
+            </div>
+            <div class="right">
+                <form action="#" class="signin_form">
+                    <div class="form_body">
+                        <input type="text " placeholder="Email" name="email">
+                        <input type="password" placeholder="Password" autocomplete="current-password" name="password">
+                        <button class="login" type="submit">Log In</button>
+                        <p class="forget">forget password?</p>
+                        <hr>
+                        <button class="create">create new account</button>
+                    </div>
+                </form>
+                <p class="foot"><span>Create a Page</span> for a celebrity, brand or business.</p>
+            </div>
+        </div>
+
+        <div class="signup" id="signup">
+            <div class="top">
+                <div>
+                    <h2>Sign Up</h2>
+                    <p>it's quick and easy</p>
+                </div>
+                <img src="/img/cross.png" alt="" onclick="hide()">
+            </div>
+            <hr>
+            <form action="#" class="signup_form">
+                <div class="signup_body">
+                    <div class="name">
+                        <input type="text" placeholder="First Name" class="same" name="firstName">
+                        <input type="text" placeholder="Last Name" class="same" name="lastName">
+                    </div>
+                    <div class="bottom">
+                        <input type="email" placeholder="Email" name="email">
+                        <input type="password" placeholder="New Password" name="password" autocomplete="off">
+                    </div>
+                </div>
+
+                <div class="birthday">
+                    <p class="text">Birthday</p>
+                    <div class="date">
+                        <select id="month" name="month">
+                            <option value="1">Jan</option>
+                            <option value="2">Feb</option>
+                            <option value="3">March</option>
+                            <option value="4">April</option>
+                            <option value="5">May</option>
+                            <option value="6">June</option>
+                            <option value="7">july</option>
+                            <option value="8">Aug</option>
+                            <option value="9">Sep</option>
+                            <option value="10">Oct</option>
+                            <option value="11">Nov</option>
+                            <option value="12">Dec</option>
+                        </select>
+                        <select id="day" name="day">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                            <option value="16">16</option>
+                            <option value="17">17</option>
+                            <option value="18">18</option>
+                            <option value="19">19</option>
+                            <option value="20">20</option>
+                            <option value="21">21</option>
+                            <option value="22">22</option>
+                            <option value="23">23</option>
+                            <option value="24">24</option>
+                            <option value="25">25</option>
+                            <option value="26">26</option>
+                            <option value="27">27</option>
+                            <option value="28">28</option>
+                            <option value="29">29</option>
+                            <option value="30">30</option>
+                            <option value="31">31</option>
+
+                        </select>
+                        <select name="year" id="year">
+                            <!-- <option value="">2022</option>
+                            <option value="">2021</option>
+                            <option value="">2020</option>
+                            <option value="">2019</option>
+                            <option value="">2018</option>
+                            <option value="">2017</option>
+                            <option value="">2016</option>
+                            <option value="">2015</option>
+                            <option value="">2014</option>
+                            <option value="">2013</option>
+                            <option value="">2012</option>
+                            <option value="">2011</option>
+                            <option value="">2010</option>
+                            <option value="">2009</option>
+                            <option value="">2008</option>
+                            <option value="">2007</option>
+                            <option value="">2006</option> -->
+                        </select>
+                    </div>
+                </div>
+                <div class="gender">
+                    <p class="text">Gender</p>
+                    <div class="person">
+                        <div>
+                            <label for="Femal">Femal</label>
+                            <input type="radio" id="Female" name="fav_language" value="Female">
+                        </div>
+                        <div>
+                            <label for="Male">Male</label>
+                            <input type="radio" id="Male" name="fav_language" value="Male">
+                        </div>
+                        <div>
+                            <label for="Custom">Custom</label>
+                            <input type="radio" id="Custom" name="fav_language" value="Custom">
+                        </div>
+                    </div>
+                </div>
+                <div class="content">
+                    <p>
+                        People who use our service may have uploaded your contact information to Facebook. <span
+                            class="blue">Learn more.</span>
+                    </p>
+                    <p>By clicking Sign Up, you agree to our Terms, <span class="blue">Privacy Policy and Cookies
+                            Policy</span>. You may receive
+                        SMS
+                        Notifications from us and can opt out any time.</p>
+                </div>
+                <button type="submit" class="btn-sign-up">Sign Up</button>
+            </form>
+
+        </div>
+    </header>
+
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script defer src="./js/config.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script defer src="main.js"></script>
+</body>
+
+</html>
