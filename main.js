@@ -49,11 +49,23 @@ btnSignUp.addEventListener("click", (e) => {
         .doc(user.uid)
         .set(data)
         .then(() => {
-          console.log("Document successfully written!");
+          // Khi tạo mới tài khoản tự động tài khoản admin sẽ xin chào
+          const recipientId = "BwJ1CS0lWMRAX4eEJBn4K854apH3";
+          const dbRealTime = firebase.database();
+          const roomId = [user.uid, recipientId].join("_");
+          const messagesRef = dbRealTime.ref(`chatRooms/${roomId}/messages`);
+
+          const newMessageRef = messagesRef.push();
+          newMessageRef.set({
+            senderId: recipientId,
+            text: "Xin chào",
+            timestamp: Date.now(),
+          });
         })
         .catch((error) => {
           console.error("Error writing document: ", error);
         });
+
       message = "Đăng ký thành công";
     })
     .catch((error) => {

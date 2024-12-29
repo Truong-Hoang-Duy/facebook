@@ -5,6 +5,7 @@ const firebaseConfig = {
   storageBucket: "facebook-c6e76.firebasestorage.app",
   messagingSenderId: "33283172369",
   appId: "1:33283172369:web:c5bfb11c356bd47416e9b0",
+  databaseURL: "https://facebook-c6e76-default-rtdb.asia-southeast1.firebasedatabase.app",
 };
 
 firebase.initializeApp(firebaseConfig);
